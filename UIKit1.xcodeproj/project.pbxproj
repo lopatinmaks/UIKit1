@@ -13,9 +13,9 @@
 		776CBA7928EEC22F004B3F17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776CBA7728EEC22F004B3F17 /* Main.storyboard */; };
 		776CBA7B28EEC232004B3F17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 776CBA7A28EEC232004B3F17 /* Assets.xcassets */; };
 		776CBA7E28EEC232004B3F17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776CBA7C28EEC232004B3F17 /* LaunchScreen.storyboard */; };
-		776CBA8E28FAB67F004B3F17 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776CBA8D28FAB67F004B3F17 /* BirthdayViewController.swift */; };
 		776CBA9028FAB6C1004B3F17 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776CBA8F28FAB6C1004B3F17 /* InfoViewController.swift */; };
-		776CBA9828FD9687004B3F17 /* 18 Мне Уже.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 776CBA9728FD9687004B3F17 /* 18 Мне Уже.mp3 */; };
+		77EF3AF829069ED600645978 /* 18 Мне Уже.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 77EF3AF729069ED600645978 /* 18 Мне Уже.mp3 */; };
+		77EF3AFA29069EE500645978 /* ava-max-million-dollar-baby-david-penn-remix.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 77EF3AF929069EE500645978 /* ava-max-million-dollar-baby-david-penn-remix.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +27,9 @@
 		776CBA7A28EEC232004B3F17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		776CBA7D28EEC232004B3F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		776CBA7F28EEC232004B3F17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		776CBA8D28FAB67F004B3F17 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
 		776CBA8F28FAB6C1004B3F17 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		776CBA9728FD9687004B3F17 /* 18 Мне Уже.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "18 Мне Уже.mp3"; path = "../../18 Мне Уже.mp3"; sourceTree = "<group>"; };
+		77EF3AF729069ED600645978 /* 18 Мне Уже.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "18 Мне Уже.mp3"; path = "../../18 Мне Уже.mp3"; sourceTree = "<group>"; };
+		77EF3AF929069EE500645978 /* ava-max-million-dollar-baby-david-penn-remix.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ava-max-million-dollar-baby-david-penn-remix.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,11 +65,11 @@
 				776CBA7128EEC22F004B3F17 /* AppDelegate.swift */,
 				776CBA7328EEC22F004B3F17 /* SceneDelegate.swift */,
 				776CBA7528EEC22F004B3F17 /* ViewController.swift */,
-				776CBA7728EEC22F004B3F17 /* Main.storyboard */,
-				776CBA9728FD9687004B3F17 /* 18 Мне Уже.mp3 */,
 				776CBA8F28FAB6C1004B3F17 /* InfoViewController.swift */,
-				776CBA8D28FAB67F004B3F17 /* BirthdayViewController.swift */,
+				776CBA7728EEC22F004B3F17 /* Main.storyboard */,
 				776CBA7A28EEC232004B3F17 /* Assets.xcassets */,
+				77EF3AF729069ED600645978 /* 18 Мне Уже.mp3 */,
+				77EF3AF929069EE500645978 /* ava-max-million-dollar-baby-david-penn-remix.mp3 */,
 				776CBA7C28EEC232004B3F17 /* LaunchScreen.storyboard */,
 				776CBA7F28EEC232004B3F17 /* Info.plist */,
 			);
@@ -135,9 +135,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				776CBA7E28EEC232004B3F17 /* LaunchScreen.storyboard in Resources */,
-				776CBA9828FD9687004B3F17 /* 18 Мне Уже.mp3 in Resources */,
+				77EF3AF829069ED600645978 /* 18 Мне Уже.mp3 in Resources */,
 				776CBA7B28EEC232004B3F17 /* Assets.xcassets in Resources */,
 				776CBA7928EEC22F004B3F17 /* Main.storyboard in Resources */,
+				77EF3AFA29069EE500645978 /* ava-max-million-dollar-baby-david-penn-remix.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +150,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				776CBA7628EEC22F004B3F17 /* ViewController.swift in Sources */,
-				776CBA8E28FAB67F004B3F17 /* BirthdayViewController.swift in Sources */,
 				776CBA7228EEC22F004B3F17 /* AppDelegate.swift in Sources */,
 				776CBA7428EEC22F004B3F17 /* SceneDelegate.swift in Sources */,
 				776CBA9028FAB6C1004B3F17 /* InfoViewController.swift in Sources */,

@@ -8,51 +8,42 @@
 import UIKit
 import AVFoundation
 
-final class RegistrationViewController: UIViewController {
+final class MyPlayListViewController: UIViewController {
 
-    @IBOutlet weak var sliderBoard: UISlider!
-
-    var player = AVAudioPlayer()
-    let slider = UISlider()
-
+    @IBOutlet private var myImageOne: UIImageView!
+    
+    @IBOutlet private var myImageAvaMax: UIImageView!
+//    let one = String(self.myImageOne.image)!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        myImageOne.image = UIImage(named: "Руки Вверх")
+        myImageAvaMax.image = UIImage(named: "Ava Max")
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let playerVC = storyboard.instantiateViewController(withIdentifier: "vc") as! PlayerViewController
+//        playerVC.pictureForSong = UIImage(named: "Руки Вверх")
+        navigationController?.pushViewController(playerVC, animated: true)
+        self.present(playerVC, animated: true)
+    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "vc" {
+//            if let indexPath = self.indexPathForSelectedRow {
+//                let playerView = segue.destination as! PlayerViewController
+//                playerView.pictureForSong = myImageOne
+//            }
+//        }
+    }
 
-        self.slider.frame = CGRect(x: 0, y: 0, width: 200, height: 23)
-        self.slider.center = self.view.center
-        self.slider.minimumValue = 0.0
-        self.slider.maximumValue = 100.0
-        self.view.addSubview(slider)
-
-        self.slider.addTarget(self, action: #selector(changeSlider(sender:)), for: .valueChanged)
-
-        do {
-            if let audioPath = Bundle.main.path(forResource: "ruki-vverkh-18-mne-uzhe", ofType: "mp3") {
-            try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
-                self.slider.maximumValue = Float(player.duration)
-            }
-        } catch {
-            print("ERROR!")
+func handeHochButton(_ sender: Any) {
+      
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if let vc2 = (storyboard.instantiateViewController(withIdentifier: "vc") as? PlayerViewController) {
+            vc2.pictureForSong = "Руки Вверх"
+            //self.present(vc2)
         }
-        self.player.play()
     }
+    
 
-    @objc func changeSlider(sender: UISlider) {
-        if sender == slider {
-            self.player.currentTime = TimeInterval(sender.value)
-        }
-    }
 
-    @IBAction func playButton(_ sender: Any) {
-        self.player.play()
-    }
-
-    @IBAction func pauseButton(_ sender: Any) {
-        self.player.pause()
-    }
-
-    @IBAction func sliderAction(_ sender: Any) {
-        self.player.volume = self.sliderBoard.value
-    }
-
-}
