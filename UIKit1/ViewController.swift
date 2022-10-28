@@ -7,13 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet private var textField: UITextField!
+
+    @IBAction func button(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = storyboard.instantiateViewController(identifier: "vc") as? WelcomeViewController {
+            vc.text = textField.text!
+            present(vc, animated: true)
+        }
     }
-
-
 }
 
