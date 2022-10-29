@@ -55,7 +55,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="handeHochButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jWa-94-tqp"/>
+                                    <action selector="handeHochButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kac-fl-imw"/>
                                     <segue destination="ENc-YF-WjC" kind="show" id="Ayv-Eo-J1w"/>
                                 </connections>
                             </button>
@@ -66,6 +66,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Ava Max Million Dollar Baby">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="avaMaxButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s2R-c8-xty"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -109,6 +112,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="forward.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="heavy"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="forwardButton:" destination="ENc-YF-WjC" eventType="touchUpInside" id="6q2-fe-Apu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bae-FL-1sV">
                                 <rect key="frame" x="98" y="771" width="60" height="34"/>
@@ -118,6 +124,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="backward.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="heavy"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="backButton:" destination="ENc-YF-WjC" eventType="touchUpInside" id="XdH-o2-fre"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="U46-oE-19V">
                                 <rect key="frame" x="37" y="695" width="341" height="30"/>
@@ -134,7 +143,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yWT-DK-GwX">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yWT-DK-GwX">
                                 <rect key="frame" x="69" y="60" width="282" height="319"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
