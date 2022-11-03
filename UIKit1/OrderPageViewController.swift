@@ -11,11 +11,13 @@ final class OrderPageViewController: UIViewController {
     
     @IBOutlet private var photo: UIImageView!
     var photoSneakers = ""
+    
+    var selectedProducts = Goods(name: "", price: 0, imageName: "")
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        photo.image = UIImage(named: photoSneakers)
+        photo.image = UIImage(named: selectedProducts.imageName)
     }
     
 
