@@ -13,6 +13,10 @@
 		776CBA7928EEC22F004B3F17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776CBA7728EEC22F004B3F17 /* Main.storyboard */; };
 		776CBA7B28EEC232004B3F17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 776CBA7A28EEC232004B3F17 /* Assets.xcassets */; };
 		776CBA7E28EEC232004B3F17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776CBA7C28EEC232004B3F17 /* LaunchScreen.storyboard */; };
+		77EF3BB5291409BC00645978 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EF3BB4291409BC00645978 /* FoodViewController.swift */; };
+		77EF3BB7291413B100645978 /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EF3BB6291413B100645978 /* ChoiceViewController.swift */; };
+		77EF3BB92914158900645978 /* PizzaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EF3BB82914158900645978 /* PizzaViewController.swift */; };
+		77EF3BBB2914165E00645978 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EF3BBA2914165E00645978 /* PaymentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		776CBA7A28EEC232004B3F17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		776CBA7D28EEC232004B3F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		776CBA7F28EEC232004B3F17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77EF3BB4291409BC00645978 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		77EF3BB6291413B100645978 /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
+		77EF3BB82914158900645978 /* PizzaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaViewController.swift; sourceTree = "<group>"; };
+		77EF3BBA2914165E00645978 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,10 @@
 				776CBA7128EEC22F004B3F17 /* AppDelegate.swift */,
 				776CBA7328EEC22F004B3F17 /* SceneDelegate.swift */,
 				776CBA7528EEC22F004B3F17 /* ViewController.swift */,
+				77EF3BB4291409BC00645978 /* FoodViewController.swift */,
+				77EF3BB6291413B100645978 /* ChoiceViewController.swift */,
+				77EF3BB82914158900645978 /* PizzaViewController.swift */,
+				77EF3BBA2914165E00645978 /* PaymentViewController.swift */,
 				776CBA7728EEC22F004B3F17 /* Main.storyboard */,
 				776CBA7A28EEC232004B3F17 /* Assets.xcassets */,
 				776CBA7C28EEC232004B3F17 /* LaunchScreen.storyboard */,
@@ -138,9 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77EF3BBB2914165E00645978 /* PaymentViewController.swift in Sources */,
 				776CBA7628EEC22F004B3F17 /* ViewController.swift in Sources */,
 				776CBA7228EEC22F004B3F17 /* AppDelegate.swift in Sources */,
+				77EF3BB7291413B100645978 /* ChoiceViewController.swift in Sources */,
+				77EF3BB5291409BC00645978 /* FoodViewController.swift in Sources */,
 				776CBA7428EEC22F004B3F17 /* SceneDelegate.swift in Sources */,
+				77EF3BB92914158900645978 /* PizzaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
