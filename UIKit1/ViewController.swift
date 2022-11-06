@@ -7,13 +7,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    //MARK: IBOutlet
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var emailLabel: UILabel!
+    @IBOutlet private var emailTF: UITextField!
+    @IBOutlet private var passwordTF: UITextField!
+    @IBOutlet private var passwordLabel: UILabel!
+    
+    
+//MARK: IBAction
+    @IBAction func entryButton(_ sender: Any) {
+        
     }
-
-
+    
 }
 
