@@ -1,13 +1,8 @@
-//
-//  ViewController.swift
-//  UIKit1
-//
-//  Created by Ольга on 06.10.2022.
-//
-
 import UIKit
+
 final class ViewController: UIViewController {
     
+    //MARK: Private properties
     private let label = UILabel()
     private let slider = UISlider()
     private let pickerColor = UIPickerView()
@@ -16,13 +11,17 @@ final class ViewController: UIViewController {
     private let textLinesLabel = UILabel()
     private var labelColor: UIColor = .black
     
-    var colorsArray: [UIColor] = [.red, .green, .yellow]
-    var numLines: [Int] = [0, 1, 2]
+    private let colorsArray: [UIColor] = [.red, .green, .yellow]
+    private let numLines: [Int] = [0, 1, 2]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //MARK: IBOutlets
+        allOutlets()
+        updateLabel()
+    }
+    //MARK: Visual components
+    private func forLabel() {
         label.frame = CGRect(x: 30, y: 200, width: 350, height: 200)
         label.text = ""
         label.backgroundColor = .lightGray
@@ -31,8 +30,9 @@ final class ViewController: UIViewController {
         label.numberOfLines = 0
         label.textAlignment = .center
         view.addSubview(label)
-        
-
+    }
+    
+    private func forSlider() {
         slider.frame = CGRect(x: 30, y: 450, width: 350, height: 23)
         slider.minimumValue = 10
         slider.maximumValue = 100
@@ -40,34 +40,46 @@ final class ViewController: UIViewController {
         slider.isEnabled = true
         slider.addTarget(self, action: #selector(sizeSlider), for: .valueChanged)
         view.addSubview(slider)
-        
-        
+    }
+    
+    private func forPickerColors() {
         pickerColor.frame = CGRect(x: 250, y: 550, width: 150, height: 100)
         pickerColor.dataSource = self
         pickerColor.delegate = self
         pickerColor.tag = 0
         view.addSubview(pickerColor)
-        
-        
+    }
+    
+    private func forPickerLines() {
         pickerLines.frame = CGRect(x: 250, y: 650, width: 150, height: 100)
         pickerLines.dataSource = self
         pickerLines.delegate = self
         pickerLines.tag = 1
         view.addSubview(pickerLines)
-        
-        
+    }
+    
+    private func forTextColorLabel() {
         textColorLabel.frame = CGRect(x: 30, y: 574, width: 200, height: 50)
         textColorLabel.text = "Выберите цвет текста"
         view.addSubview(textColorLabel)
-        
-        
+    }
+    
+    private func forTextLinesLabel() {
         textLinesLabel.frame = CGRect(x: 30, y: 674, width: 200, height: 50)
         textLinesLabel.text = "Выберите количество строк текста"
         textLinesLabel.numberOfLines = 0
         view.addSubview(textLinesLabel)
-        
-        updateLabel()
     }
+    //MARK: Private Methods
+    private func allOutlets() {
+        forLabel()
+        forSlider()
+        forPickerLines()
+        forPickerColors()
+        forTextColorLabel()
+        forTextLinesLabel()
+    }
+    
     //MARK: IBAction
     @IBAction func addItem(_ sender: Any) {
         labelText(title: "Внимание", message: "Введите текст", style: .alert)
@@ -81,17 +93,6 @@ final class ViewController: UIViewController {
     
     @objc func sizeSlider() {
         label.font = label.font.withSize(CGFloat(slider.value))
-    }
-    
-    func labelText(title: String, message: String, style: UIAlertController.Style) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: style)
-        let action = UIAlertAction(title: "OK", style: .default) {action in
-            guard let text = alert.textFields?.first else {return}
-            self.label.text = (text.text)!
-        }
-        alert.addTextField()
-        alert.addAction(action)
-        present(alert, animated: true)
     }
 }
 
@@ -132,6 +133,19 @@ extension ViewController: UIPickerViewDelegate {
     }
 }
 
+extension ViewController {
+    func labelText(title: String, message: String, style: UIAlertController.Style) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: style)
+        let action = UIAlertAction(title: "OK", style: .default) {action in
+            guard let text = alert.textFields?.first else {return}
+            self.label.text = (text.text)!
+        }
+        alert.addTextField()
+        alert.addAction(action)
+        present(alert, animated: true)
+    }
+}
+
 func colorTextInLabel(color: UIColor) -> String {
     switch color {
     case .red:
@@ -157,8 +171,3 @@ func numberLinesOfText(grade: Int) -> Int {
         return 0
     }
 }
-
-
-
-
-
