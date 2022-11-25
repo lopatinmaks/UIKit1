@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7730FF85292E2EA4001A191B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7730FF84292E2EA4001A191B /* Main.storyboard */; };
+		7730FF872930B573001A191B /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7730FF862930B573001A191B /* WebViewViewController.swift */; };
+		7730FF892930CC7E001A191B /* пример.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7730FF882930CC7D001A191B /* пример.pdf */; };
 		7767DD35292B816D00081A96 /* CoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7767DD34292B816D00081A96 /* CoverViewController.swift */; };
 		776CBA7228EEC22F004B3F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776CBA7128EEC22F004B3F17 /* AppDelegate.swift */; };
 		776CBA7428EEC22F004B3F17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776CBA7328EEC22F004B3F17 /* SceneDelegate.swift */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		7730FF84292E2EA4001A191B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7730FF862930B573001A191B /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		7730FF882930CC7D001A191B /* пример.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "пример.pdf"; sourceTree = "<group>"; };
 		7767DD34292B816D00081A96 /* CoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverViewController.swift; sourceTree = "<group>"; };
 		776CBA6E28EEC22F004B3F17 /* UIKit1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKit1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		776CBA7128EEC22F004B3F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,9 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				776CBA7128EEC22F004B3F17 /* AppDelegate.swift */,
+				7730FF882930CC7D001A191B /* пример.pdf */,
 				776CBA7328EEC22F004B3F17 /* SceneDelegate.swift */,
 				776CBA7528EEC22F004B3F17 /* ViewController.swift */,
 				7730FF84292E2EA4001A191B /* Main.storyboard */,
+				7730FF862930B573001A191B /* WebViewViewController.swift */,
 				7767DD34292B816D00081A96 /* CoverViewController.swift */,
 				776CBA7A28EEC232004B3F17 /* Assets.xcassets */,
 				776CBA7C28EEC232004B3F17 /* LaunchScreen.storyboard */,
@@ -130,6 +136,7 @@
 			files = (
 				7730FF85292E2EA4001A191B /* Main.storyboard in Resources */,
 				776CBA7E28EEC232004B3F17 /* LaunchScreen.storyboard in Resources */,
+				7730FF892930CC7E001A191B /* пример.pdf in Resources */,
 				776CBA7B28EEC232004B3F17 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7730FF872930B573001A191B /* WebViewViewController.swift in Sources */,
 				776CBA7628EEC22F004B3F17 /* ViewController.swift in Sources */,
 				776CBA7228EEC22F004B3F17 /* AppDelegate.swift in Sources */,
 				7767DD35292B816D00081A96 /* CoverViewController.swift in Sources */,

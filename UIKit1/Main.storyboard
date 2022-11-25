@@ -234,7 +234,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nPu-fU-v7U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="271" y="-301"/>
+            <point key="canvasLocation" x="270.99236641221376" y="-301.40845070422534"/>
+        </scene>
+        <!--Web View View Controller-->
+        <scene sceneID="6CC-S1-skM">
+            <objects>
+                <viewController storyboardIdentifier="cover" id="cFH-LW-5zI" customClass="WebViewViewController" customModule="UIKit1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Wr-V1-sZg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXg-5W-wCS">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mbP-1T-atc">
+                                <rect key="frame" x="0.0" y="774" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items/>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HTP-eC-Ncv">
+                                <rect key="frame" x="0.0" y="730" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="fj1-5v-U62">
+                                        <connections>
+                                            <action selector="goBackAction:" destination="cFH-LW-5zI" id="kmc-q3-QP9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="65Z-55-fFe"/>
+                                    <barButtonItem systemItem="fastForward" id="iDp-I8-bzM">
+                                        <connections>
+                                            <action selector="goForwardAction:" destination="cFH-LW-5zI" id="0Qi-Hg-rWP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CU7-OU-m82"/>
+                                    <barButtonItem systemItem="refresh" id="ZuT-m9-ShS">
+                                        <connections>
+                                            <action selector="refrechAction:" destination="cFH-LW-5zI" id="HO4-dR-v6V"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="35z-YA-aOB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gXg-5W-wCS" firstAttribute="trailing" secondItem="35z-YA-aOB" secondAttribute="trailing" id="39i-gH-iff"/>
+                            <constraint firstItem="gXg-5W-wCS" firstAttribute="leading" secondItem="35z-YA-aOB" secondAttribute="leading" id="8sX-T2-Tfi"/>
+                            <constraint firstItem="gXg-5W-wCS" firstAttribute="leading" secondItem="35z-YA-aOB" secondAttribute="leading" id="9oq-cH-VDP"/>
+                            <constraint firstItem="gXg-5W-wCS" firstAttribute="top" secondItem="35z-YA-aOB" secondAttribute="top" id="EdV-PE-3Uv"/>
+                            <constraint firstItem="gXg-5W-wCS" firstAttribute="trailing" secondItem="35z-YA-aOB" secondAttribute="trailing" id="Omk-9m-iyu"/>
+                            <constraint firstItem="gXg-5W-wCS" firstAttribute="bottom" secondItem="35z-YA-aOB" secondAttribute="bottom" id="W9f-38-0Dq"/>
+                            <constraint firstItem="gXg-5W-wCS" firstAttribute="bottom" secondItem="35z-YA-aOB" secondAttribute="bottom" id="at6-cn-mvu"/>
+                            <constraint firstItem="gXg-5W-wCS" firstAttribute="top" secondItem="35z-YA-aOB" secondAttribute="top" id="lgc-zo-t4k"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="goBackItem" destination="iDp-I8-bzM" id="10e-kJ-2hN"/>
+                        <outlet property="goForwardItem" destination="iDp-I8-bzM" id="j78-Rz-Ihw"/>
+                        <outlet property="myWebView" destination="gXg-5W-wCS" id="TSR-XG-a0d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="prh-WY-9Zr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129.0076335877861" y="-301.40845070422534"/>
         </scene>
     </scenes>
     <resources>

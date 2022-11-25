@@ -23,6 +23,15 @@ final class CoverViewController: UIViewController {
         forSystemGreyButton()
         forAddBusket()
         forImages()
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(goOfficialWebSite(sender:)))
+        view.addGestureRecognizer(recognizer)
+    }
+    
+    @objc func goOfficialWebSite(sender: UITapGestureRecognizer) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let goWebView = storyboard.instantiateViewController(withIdentifier: "cover") as! WebViewViewController
+        present(goWebView, animated: true)
     }
     
     private func forImages() {
