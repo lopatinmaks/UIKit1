@@ -1,6 +1,6 @@
 import UIKit
 
-final class ForYouViewController: UIViewController {
+final class ForYouViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //MARK: Outlets
     @IBOutlet weak var myProgressView: UIProgressView!
@@ -11,6 +11,7 @@ final class ForYouViewController: UIViewController {
     //MARK: Variable
     private let myButton = UIButton()
     private let mySpot = UIButton()
+    private var chooseImage = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +37,10 @@ final class ForYouViewController: UIViewController {
         view.addSubview(mySpot)
     }
     
-    private func forAvatar() {
-        
-        avatarImageView.layer.cornerRadius = 34
-    }
+//    private func forAvatar() {
+//
+//        avatarImageView.layer.cornerRadius = 34
+//    }
     
     private func forView() {
         
@@ -60,8 +61,36 @@ final class ForYouViewController: UIViewController {
         
         forButton()
         forSpot()
-        forAvatar()
+        //forAvatar()
         forView()
         forAirPods()
+        forAvatarUserDefaults()
+    }
+    
+    private func forAvatarUserDefaults() {
+        if (UserDefaults.standard.object(forKey: "ждун") as? NSData) != nil {
+            let photo = UserDefaults.standard.object(forKey: "ждун") as! NSData
+            avatarImageView.image = UIImage(data: photo as Data)
+        }
+        avatarImageView.layer.cornerRadius = 34
+        avatarImageView.contentMode = .scaleAspectFill
+    }
+    
+    private func forChoose(_ sender: UIButton) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            picker.sourceType = .savedPhotosAlbum
+            present(picker, animated: true)
+        }
+    }
+    
+    internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        let defaults = UserDefaults.standard
+        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        avatarImageView.image = image
+        let saveImage = image.pngData() as NSData?
+        defaults.set(saveImage, forKey: "ждун")
+        picker.dismiss(animated: true)
     }
 }
