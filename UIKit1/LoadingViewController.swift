@@ -1,10 +1,3 @@
-//
-//  LoadingViewController.swift
-//  UIKit1
-//
-//  Created by Ольга on 29.11.2022.
-//
-
 import UIKit
 
 class LoadingViewController: UIViewController {
